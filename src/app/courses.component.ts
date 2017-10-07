@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
               {{ course }}
             </li>
         </ul>
+        <button class="btn btn-primary">Save</button>        
         `
 })
 export class CoursesComponent {
