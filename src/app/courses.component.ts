@@ -10,10 +10,12 @@ import { Component } from '@angular/core';
               {{ course }}
             </li>
         </ul>
-        <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'red'">Save</button>        
+        <button (click)= "onSave($event)" class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'red'">Save</button>        
         `
 })
+
 export class CoursesComponent {
+  isFavorite = false;
   title = "List of courses";
   isActive = false;
   courses;
@@ -24,5 +26,9 @@ export class CoursesComponent {
 
   getTitle() {
     return this.title;
+  }
+
+  onSave($event) {
+    console.log("Save button clicked. Event: ", $event)
   }
 }
