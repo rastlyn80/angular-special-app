@@ -10,11 +10,12 @@ import { Component } from '@angular/core';
               {{ course }}
             </li>
         </ul>
-        <button class="btn btn-primary">Save</button>        
+        <button class="btn btn-primary" [class.active]="isActive">Save</button>        
         `
 })
 export class CoursesComponent {
   title = "List of courses";
+  isActive = false;
   courses;
 
   constructor(service: CoursesService) {
