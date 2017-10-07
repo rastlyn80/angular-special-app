@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
               {{ course }}
             </li>
         </ul>
-        <button class="btn btn-primary" [class.active]="isActive">Save</button>        
+        <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'red'">Save</button>        
         `
 })
 export class CoursesComponent {
