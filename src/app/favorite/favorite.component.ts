@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class FavoriteComponent {
   @Input('is-favorite') isFavorite: boolean;
-  @Output() change = new EventEmitter();
+  @Output('change') change = new EventEmitter();
 
   constructor() { }
   
