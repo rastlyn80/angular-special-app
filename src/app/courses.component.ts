@@ -15,7 +15,6 @@ import { Component } from '@angular/core';
 })
 
 export class CoursesComponent {
-  isFavorite = false;
   title = "List of courses";
   isActive = false;
   courses;

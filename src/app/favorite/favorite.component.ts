@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'favorite',
@@ -7,16 +7,18 @@ import { Component } from '@angular/core';
 })
 
 export class FavoriteComponent {
-  isFavorite = false;
+  @Input('is-favorite') isFavorite: boolean;
+  @Output() change = new EventEmitter();
 
   constructor() { }
   
   getGlyphicon() {
-    return this.isFavorite ? "glyphicon glyphicon-star-empty" : "glyphicon glyphicon-star";
+    return this.isFavorite ? "glyphicon glyphicon-star" : "glyphicon glyphicon-star-empty";
   }
 
   onFavorite() {
     this.isFavorite = !this.isFavorite;
+    this.change.emit();
   }
 
 }

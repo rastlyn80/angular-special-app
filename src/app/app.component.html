@@ -1,5 +1,5 @@
 <h1>Welcome</h1>
 <courses></courses>
 <authors></authors>
-<favorite></favorite>
+<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged()"></favorite>
 <titlecase></titlecase>
