@@ -1,0 +1,9 @@
+<span 
+  role="button"
+  class="glyphicon glyphicon-heart" 
+  [class.liked]="isLiked"
+  [class.unliked]="!isLiked"
+  (click)="onLike()"
+  (hover)="onHover()"
+  ></span>
+<span>{{ likesCount }}</span>

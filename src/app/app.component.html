@@ -3,3 +3,7 @@
 <authors></authors>
 <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 <titlecase></titlecase>
+<like
+[likesCount]="tweet.likesCount"
+[isLiked]="tweet.isLiked">
+</like>
