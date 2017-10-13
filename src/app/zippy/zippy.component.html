@@ -1,0 +1,15 @@
+  <div class="panel panel-default" (click)="onClick()" >
+    <div class="panel-heading">
+      <h4>{{ title }} 
+      <span 
+        class="pull-right glyphicon" 
+        [ngClass]="{
+          'glyphicon-chevron-right': !isOpened,
+          'glyphicon-chevron-down': isOpened }"
+        ></span></h4>
+    </div>
+
+    <div *ngIf="isOpened" class="panel-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
